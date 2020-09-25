@@ -2,13 +2,10 @@ import os
 
 def info_gathering_menu(ipadd='',host=''):
 	choice=0
-	os.system("figlet -f big Information Gathering") 
+	os.system("figlet -f big Vulnerability Assessment") 
 	while(choice<1 or choice>5):
 		print("1.\tNikto")
 		print("2.\tNmap")
-		print("3.\tWhoIs")
-		print("4.\thost")
-		print("5.\tDNSEnum")
 		print("6.\tExit")
 		choice=int(input("Enter your choice: "))
 		
@@ -20,25 +17,12 @@ def info_gathering_menu(ipadd='',host=''):
 			run_nikto(ipadd)
 		elif(choice == 2):
 			run_nmap(ipadd)
-		elif(choice == 3):
-			run_whois(ipadd)
-		elif(choice == 4):
-			run_host(host)
-		elif(choice == 5):
-			run_dnsenum(host)
 		elif(choice == 6):
 			return
 
 		input("Press enter to continue")
 		os.system('clear')
 		info_gathering_menu(ipadd)
-
-		
-def run_dnsenum(host):
-	print("dnsenum "+host+" |tee -a output.txt")
-	os.system("dnsenum -u g "+host+" -o dnsenum_op.xml")
-
-
 
 def run_nikto(ipadd):
 	choice = input("Add extra options? [y/n]")
@@ -54,7 +38,7 @@ def run_nikto(ipadd):
 		scantime = input("Scan time\t: ")
 		if(len(scantime)>0):
 			base+=(" -maxtime "+scantime)
-		
+
 		if(input("Disable SSL[y/n]\t: ")=='y'):
 			base+=" -nossl"
 		elif(input("Force SSL[y/n]\t: ")=='y'):
@@ -86,14 +70,6 @@ def run_nikto(ipadd):
 		
 	os.system(base)
 
-
-def run_whois(ipadd):
-	os.system("whois "+ipadd+" |tee -a output.txt")
-
-
-def run_host(host):
-	os.system("host "+host+" |tee -a output.txt")
-	
 def run_nmap(ipadd):
 	if(input('Edit ip address[y/n]\t: ')=='y'):
 		ipadd = input("IP address\t: ")
@@ -123,6 +99,4 @@ def run_nmap(ipadd):
 	base += " "+ipadd+" |tee -a output.txt"
 	os.system(base)
 
-
-info_gathering_menu('137.74.187.104', 'hackthissite.org')
-
+info_gathering_menu('137.74.187.102')
