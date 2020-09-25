@@ -2,11 +2,13 @@ import os
 
 def info_gathering_menu(ipadd):
 	choice=0
-	while(choice<1 or choice>4):
+	os.system("figlet -f big Information Gathering") 
+	while(choice<1 or choice>5):
 		print("1.\tNikto")
 		print("2.\tNmap")
 		print("3.\tWhoIs")
 		print("4.\thost")
+		print("5.\tExit")
 		choice=int(input("Enter your choice: "))
 		
 		if(choice<1 or choice>4):
@@ -16,11 +18,13 @@ def info_gathering_menu(ipadd):
 		if(choice==1):
 			run_nikto(ipadd)
 		elif(choice == 2):
-			continue
+			run_nmap(ipadd)
 		elif(choice == 3):
 			run_whois(ipadd)
 		elif(choice == 4):
 			run_host(ipadd)
+		elif(choice == 5):
+			return
 
 		input("Press enter to continue")
 		os.system('clear')
@@ -82,7 +86,34 @@ def run_whois(ipadd):
 def run_host(ipadd):
 	os.system("host "+ipadd+" |tee -a output.txt")
 	
+def run_nmap(ipadd):
+	if(input('Edit ip address[y/n]\t: ')=='y'):
+		ipadd = input("IP address\t: ")
 
+
+	base = 'nmap'
+	choice = input("Add extra options?[y/n]\t: ")
+	if(choice != 'n'):
+
+		print("Scan type\t")
+		print("TCP Connect Scan\t-sT")
+		print("TCP SYN scan(Silent scan) -sS")
+		print("UDP scan\t\t-sU ")
+		print("No ping scan\t\t-Pn ")
+		print("Host Discovery(no ports) -sn ")
+		print("Version Scan\t\t-sV ")
+		print("OS Detection\t\t-o ")
+		scan = input("Enter scan type\t:")
+		base += " " + scan
+		
+		ports = input('Ports(nmap format)\t: ')
+		if(ports=='-F'):
+			base+=' -F'
+		else:		
+			base += (' -p '+ports)
+
+	base += " "+ipadd+" |tee -a output.txt"
+	os.system(base)
 
 
 info_gathering_menu('137.74.187.104')
