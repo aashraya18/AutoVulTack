@@ -3,6 +3,7 @@ import intro.menu as intro
 import anonymity.anonymity as anonymity
 import info_gathering.menu as inf
 import vuln_assessment.menu as vuln
+import exploit.menu as exploit
 
 os.system('bash setup/setup.sh')
 [ipadd, url, host, workspace] = intro.intro()
@@ -16,7 +17,7 @@ while(choice!=-1):
 	elif(choice==3):
 		vuln.vuln_menu(ipadd, host, url)
 	elif(choice==4):
-		continue
+		exploit.exploit_menu()
 	elif(choice==5):
 		os.system('figlet -f big thank you ;)')
 		os.system(f'mv output.txt workspace/{workspace}/')

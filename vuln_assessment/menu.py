@@ -10,7 +10,7 @@ def vuln_menu(ipadd='',host='',url=''):
 		print("4.\tExit")
 		choice=int(input("Enter your choice: "))
 		
-		if(choice<1 or choice>6):
+		if(choice<1 or choice>4):
 			print("Enter a valid choice...")
 			continue
 
