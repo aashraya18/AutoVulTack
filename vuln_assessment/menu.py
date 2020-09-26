@@ -1,12 +1,13 @@
 import os
 
-def info_gathering_menu(ipadd='',host=''):
+def info_gathering_menu(ipadd='',host='',url=''):
 	choice=0
 	os.system("figlet -f big Vulnerability Assessment") 
 	while(choice<1 or choice>5):
 		print("1.\tNikto")
 		print("2.\tNmap")
-		print("6.\tExit")
+		print("3.\tWapiti")
+		print("4.\tExit")
 		choice=int(input("Enter your choice: "))
 		
 		if(choice<1 or choice>6):
@@ -17,7 +18,9 @@ def info_gathering_menu(ipadd='',host=''):
 			run_nikto(ipadd)
 		elif(choice == 2):
 			run_nmap(ipadd)
-		elif(choice == 6):
+		elif(choice == 3):
+			run_wapiti(url)
+		elif(choice == 4):
 			return
 
 		input("Press enter to continue")
@@ -70,10 +73,27 @@ def run_nikto(ipadd):
 		
 	os.system(base)
 
+def run_wapiti(url):
+	base = 'wapiti -u '+url
+
+	choice = input("Add extra options?[y/n]\t: ")
+	if(choice != 'n'):
+		print("Scope\npage\nfolder\ndomain\nurl\npunk")
+		scope = input("Enter scope\t: ")
+		if(len(scope)>0):
+			base+=' --scope '+scope
+		os.system('wapiti --list-modules')
+		modules=input('Enter modules(cs)\t: ')
+		if(len(modules)>0):
+			base+=' -m '+modules
+		base+=' -f txt -o wapiti_report.txt'
+	print(base)
+	os.system(base)
+
+
 def run_nmap(ipadd):
 	if(input('Edit ip address[y/n]\t: ')=='y'):
 		ipadd = input("IP address\t: ")
-
 
 	base = 'nmap'
 	choice = input("Add extra options?[y/n]\t: ")
