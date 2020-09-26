@@ -1,0 +1,275 @@
+WhatWeb report for http://testphp.vulnweb.com
+Status    : 200 OK
+Title     : <None>
+IP        : 176.28.50.165
+Country   : GERMANY, DE
+
+Summary   : HTTPServer[nginx/1.4.1], nginx[1.4.1], PHP[5.3.10-1~lucid+2uwsgi2], X-Powered-By[PHP/5.3.10-1~lucid+2uwsgi2]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : nginx/1.4.1 (from server string)
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.10-1~lucid+2uwsgi2
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/5.3.10-1~lucid+2uwsgi2 (from x-powered-by string)
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Version      : 1.4.1
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.4.1
+	Date: Wed, 01 Jul 1970 07:51:02 GMT
+	Content-Type: text/html
+	Transfer-Encoding: chunked
+	Connection: close
+	X-Powered-By: PHP/5.3.10-1~lucid+2uwsgi2
+	Content-Encoding: gzip
+	
+WhatWeb report for http://testphp.vulnweb.com/
+Status    : 200 OK
+Title     : Home of Acunetix Art
+IP        : 176.28.50.165
+Country   : GERMANY, DE
+
+Summary   : ActiveX[D27CDB6E-AE6D-11cf-96B8-444553540000], Adobe-Flash, Email[wvs@acunetix.com], HTTPServer[nginx/1.4.1], nginx[1.4.1], Object[http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0][clsid:D27CDB6E-AE6D-11cf-96B8-444553540000], PHP[5.3.10-1~lucid+2uwsgi2], Script[text/JavaScript], X-Powered-By[PHP/5.3.10-1~lucid+2uwsgi2]
+
+Detected Plugins:
+[ ActiveX ]
+	ActiveX is a framework based on Microsoft's Component 
+	Object Model (COM) and Object Linking and Embedding (OLE) 
+	technologies. ActiveX components officially operate only 
+	with Microsoft's Internet Explorer web browser and the 
+	Microsoft Windows operating system. - More info: 
+	http://en.wikipedia.org/wiki/ActiveX 
+
+	Module       : D27CDB6E-AE6D-11cf-96B8-444553540000
+
+[ Adobe-Flash ]
+	This plugin identifies instances of embedded adobe flash 
+	files. 
+
+	Google Dorks: (1)
+	Website     : https://get.adobe.com/flashplayer/
+
+[ Email ]
+	Extract email addresses. Find valid email address and 
+	syntactically invalid email addresses from mailto: link 
+	tags. We match syntactically invalid links containing 
+	mailto: to catch anti-spam email addresses, eg. bob at 
+	gmail.com. This uses the simplified email regular 
+	expression from 
+	http://www.regular-expressions.info/email.html for valid 
+	email address matching. 
+
+	String       : wvs@acunetix.com
+	String       : wvs@acunetix.com
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : nginx/1.4.1 (from server string)
+
+[ Object ]
+	HTML object tag. This can be audio, video, Flash, ActiveX, 
+	Python, etc. More info: 
+	http://www.w3schools.com/tags/tag_object.asp 
+
+	Module       : clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 (from classid)
+	String       : http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.10-1~lucid+2uwsgi2
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/JavaScript
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/5.3.10-1~lucid+2uwsgi2 (from x-powered-by string)
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Version      : 1.4.1
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.4.1
+	Date: Wed, 01 Jul 1970 07:59:14 GMT
+	Content-Type: text/html
+	Transfer-Encoding: chunked
+	Connection: close
+	X-Powered-By: PHP/5.3.10-1~lucid+2uwsgi2
+	Content-Encoding: gzip
+	
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2020, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       137.74.0.0 - 137.74.255.255
+CIDR:           137.74.0.0/16
+NetName:        RIPE
+NetHandle:      NET-137-74-0-0-1
+Parent:         NET137 (NET-137-0-0-0-0)
+NetType:        Early Registrations, Transferred to RIPE NCC
+OriginAS:       
+Organization:   RIPE Network Coordination Centre (RIPE)
+RegDate:        2016-08-29
+Updated:        2016-08-29
+Ref:            https://rdap.arin.net/registry/ip/137.74.0.0
+
+
+
+OrgName:        RIPE Network Coordination Centre
+OrgId:          RIPE
+Address:        P.O. Box 10096
+City:           Amsterdam
+StateProv:      
+PostalCode:     1001EB
+Country:        NL
+RegDate:        
+Updated:        2013-07-29
+Ref:            https://rdap.arin.net/registry/entity/RIPE
+
+ReferralServer:  whois://whois.ripe.net
+ResourceLink:  https://apps.db.ripe.net/search/query.html
+
+OrgTechHandle: RNO29-ARIN
+OrgTechName:   RIPE NCC Operations
+OrgTechPhone:  +31 20 535 4444 
+OrgTechEmail:  hostmaster@ripe.net
+OrgTechRef:    https://rdap.arin.net/registry/entity/RNO29-ARIN
+
+OrgAbuseHandle: ABUSE3850-ARIN
+OrgAbuseName:   Abuse Contact
+OrgAbusePhone:  +31205354444 
+OrgAbuseEmail:  abuse@ripe.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/ABUSE3850-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2020, American Registry for Internet Numbers, Ltd.
+#
+
+
+
+Found a referral to whois.ripe.net.
+
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '137.74.187.96 - 137.74.187.127'
+
+% Abuse contact for '137.74.187.96 - 137.74.187.127' is 'abuse@ovh.net'
+
+inetnum:        137.74.187.96 - 137.74.187.127
+netname:        OVH_113911647
+descr:          OVH Static IP
+country:        NL
+org:            ORG-SH80-RIPE
+admin-c:        OTC7-RIPE
+tech-c:         OTC7-RIPE
+status:         ASSIGNED PA
+mnt-by:         OVH-MNT
+created:        2016-08-25T08:53:54Z
+last-modified:  2016-08-25T08:53:54Z
+source:         RIPE
+
+organisation:   ORG-SH80-RIPE
+org-name:       Staff HackThisSite
+org-type:       OTHER
+address:        Stadtmitte 1
+address:        10117 Berlin
+address:        DE
+phone:          +49.151011011
+mnt-ref:        OVH-MNT
+mnt-by:         OVH-MNT
+created:        2016-07-28T19:32:04Z
+last-modified:  2017-10-30T16:51:28Z
+source:         RIPE # Filtered
+
+role:           OVH NL Technical Contact
+address:        OVH BV
+address:        Corkstraat 46
+address:        3047 AC Rotterdam
+address:        The Netherlands
+admin-c:        OK217-RIPE
+tech-c:         GM84-RIPE
+nic-hdl:        OTC7-RIPE
+abuse-mailbox:  abuse@ovh.net
+mnt-by:         OVH-MNT
+created:        2009-03-18T15:51:01Z
+last-modified:  2009-03-18T15:51:01Z
+source:         RIPE # Filtered
+
+% Information related to '137.74.0.0/16AS16276'
+
+route:          137.74.0.0/16
+origin:         AS16276
+descr:          OVH
+mnt-by:         OVH-MNT
+created:        2016-07-15T10:03:53Z
+last-modified:  2016-07-15T10:03:53Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.97.2 (WAGYU)
+
+

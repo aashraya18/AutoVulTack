@@ -1,6 +1,6 @@
 import os
 
-def info_gathering_menu(ipadd='',host='',url=''):
+def vuln_menu(ipadd='',host='',url=''):
 	choice=0
 	os.system("figlet -f big Vulnerability Assessment") 
 	while(choice<1 or choice>5):
@@ -25,7 +25,7 @@ def info_gathering_menu(ipadd='',host='',url=''):
 
 		input("Press enter to continue")
 		os.system('clear')
-		info_gathering_menu(ipadd)
+		vuln_menu(ipadd, host, url)
 
 def run_nikto(ipadd):
 	choice = input("Add extra options? [y/n]")
@@ -119,4 +119,3 @@ def run_nmap(ipadd):
 	base += " "+ipadd+" |tee -a output.txt"
 	os.system(base)
 
-info_gathering_menu('137.74.187.102')
