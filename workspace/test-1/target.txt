@@ -1,3 +1,0 @@
-127.0.0.1
-http://localhost/DVWA/vulnerabilities/sqli_blind/
-http://localhost/DVWA
