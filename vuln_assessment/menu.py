@@ -32,7 +32,7 @@ def run_nikto(ipadd):
 	base = "nikto -h "+ipadd
 	if(choice != 'n'):
 		ports = input("Ports\t\t: ").split(' ')
-		if(len(ports)>0):
+		if(len(ports)>1 or ports[0]!=''):
 			base +=" -port "
 			for i in ports[:-1]:
 				base += (i+",")
@@ -89,6 +89,8 @@ def run_wapiti(url):
 		base+=' -f txt -o wapiti_report.txt'
 	print(base)
 	os.system(base)
+	os.system('cat wapiti_report.txt >> output.txt')
+	os.system('rm wapiti_report.txt')
 
 
 def run_nmap(ipadd):

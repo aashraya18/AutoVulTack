@@ -12,7 +12,7 @@ def intro():
 	
 def menu():
 	choice=0
-	while(choice<1 or choice>5):
+	while(choice<1 or choice>6):
 		os.system('clear')
 		os.system("figlet Menu")
 		print("Enter what you want to do next")
@@ -20,9 +20,10 @@ def menu():
 		print("2.\tInformation Gathering")
 		print("3.\tVulnerability Assessment")
 		print("4.\tPerform Attack")
-		print("5.\tExit")
+		print("5.\tShow Current Report")		
+		print("6.\tExit")
 		choice = int(input("Enter your choice: "))
-		if(choice<1 or choice>5):
+		if(choice<1 or choice>6):
 			print("Please enter a valid choice")
 		else:
 			os.system('clear')
@@ -50,10 +51,7 @@ def startup2():
 		print(i)
 	workspace = input('Choose project\t\t: ')
 	with open('workspace/'+workspace+'/target.txt', 'r') as fil:
-		ipadd = fil.read()
-		url = fil.read()
-		host = fil.read()
-		ipadd=ipadd[:-1]
-		url=url[:-1]
-		host=host[:-1]
+		target = fil.read();
+	[ipadd, url, host] = target[:-1].split('\n')
+	os.system(f'mv workspace/{workspace}/output.txt ./')
 	return [ipadd, url, host, workspace]

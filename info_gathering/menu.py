@@ -74,7 +74,7 @@ def run_nmap(ipadd):
 		ports = input('Ports(nmap format)\t: ')
 		if(ports=='-F'):
 			base+=' -F'
-		else:		
+		elif(len(ports)>0) :		
 			base += (' -p '+ports)
 
 	base += " "+ipadd+" |tee -a output.txt"

@@ -19,7 +19,9 @@ while(choice!=-1):
 	elif(choice==4):
 		exploit.exploit_menu()
 	elif(choice==5):
-		os.system('figlet -f big thank you ;)')
+		os.system('mousepad output.txt')
+	elif(choice==6):
+		os.system('figlet -f big thank you')
 		os.system(f'mv output.txt workspace/{workspace}/')
 		break
 	
